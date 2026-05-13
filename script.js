@@ -2,17 +2,18 @@ const supabaseUrl = 'https://tyeprfwdzshjunzqdwkg.supabase.co';
 
 const supabaseKey = 'sb_publishable_XZdunX9uP8mhSfzdUKHaHg_Za692cri';
 
-const supabase = window.supabase.createClient(
+const db = window.supabase.createClient(
   supabaseUrl,
   supabaseKey
 );
+
 async function salvarConvidado() {
 
   const nome = document.getElementById('nome').value;
 
   const presente = document.getElementById('presente').value;
 
-  const { data, error } = await supabase
+  const { data, error } = await db
     .from('convidados')
     .insert([
       {
