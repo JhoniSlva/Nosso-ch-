@@ -1,4 +1,4 @@
-const supabaseUrl = 'https://jhonieveronicacha.netlify.app/';
+const supabaseUrl = 'https://jhonieveronicanosso.netlify.app/';
 const supabaseKey = 'https://tyeprfwdzshjunzqdwkg.supabase.co/rest/v1/';
 
 const supabase = window.supabase.createClient(
