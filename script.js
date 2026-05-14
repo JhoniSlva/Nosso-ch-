@@ -1,6 +1,9 @@
 const flowers =
 document.querySelectorAll('.flower');
 
+const mouseLight =
+document.querySelector('.mouse-light');
+
 document.addEventListener('mousemove',(e)=>{
 
   const x =
@@ -9,19 +12,25 @@ document.addEventListener('mousemove',(e)=>{
   const y =
   e.clientY / window.innerHeight;
 
+  mouseLight.style.left =
+  e.clientX + 'px';
+
+  mouseLight.style.top =
+  e.clientY + 'px';
+
   flowers.forEach((flower,index)=>{
 
     const speed =
-    index === 0 ? 30 : -30;
+    index === 0 ? 40 : -40;
 
     flower.style.transform = `
-translate(
-  ${x * speed}px,
-  ${y * speed}px
-)
-rotate(${x * 8}deg)
-scale(1.03)
-`;
+      translate(
+        ${x * speed}px,
+        ${y * speed}px
+      )
+      rotate(${x * 10}deg)
+      scale(1.03)
+    `;
 
   });
 
