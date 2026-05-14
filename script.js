@@ -21,15 +21,14 @@ document.addEventListener('mousemove',(e)=>{
   flowers.forEach((flower,index)=>{
 
     const speed =
-    index === 0 ? 40 : -40;
+    index === 0 ? 20 : -20;
 
     flower.style.transform = `
       translate(
         ${x * speed}px,
         ${y * speed}px
       )
-      rotate(${x * 10}deg)
-      scale(1.03)
+      rotate(${x * 6}deg)
     `;
 
   });
