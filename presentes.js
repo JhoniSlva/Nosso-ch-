@@ -383,70 +383,129 @@ card.dataset.value === 'true';
 
 });
 
-async function carregarItens(){
+const gridContainer =
+document.getElementById('gridContainer');
 
-const { data } =
-await db
-.from('convidados')
-.select('presente');
+const tabs =
+document.querySelectorAll('.tab');
 
-const reservados =
-data.map(item=>item.presente);
+let reservados = [];
 
-const grid =
-document.getElementById('grid');
+async function carregarReservados(){
 
-itens.forEach(item=>{
+  const { data } =
+  await db
+  .from('convidados')
+  .select('presente');
 
-if(reservados.includes(item.nome))
-return;
+  reservados =
+  data.map(item=>item.presente);
 
-const div =
-document.createElement('div');
-
-div.classList.add('item');
-
-div.innerHTML = `
-
-<div class="item-image">
-<img src="${item.imagem}">
-</div>
-
-<div class="item-info">
-
-<div class="item-category">
-${item.categoria}
-</div>
-
-<div class="item-name">
-${item.nome}
-</div>
-
-</div>
-
-`;
-
-div.onclick = ()=>{
-
-document
-.querySelectorAll('.item')
-.forEach(el=>el.classList.remove('selected'));
-
-div.classList.add('selected');
-
-presenteSelecionado =
-item.nome;
-
-};
-
-grid.appendChild(div);
-
-});
+  renderizarItens('todos');
 
 }
 
-carregarItens();
+function renderizarItens(categoria){
 
+  gridContainer.innerHTML = '';
+
+  const categorias =
+  categoria === 'todos'
+  ? [...new Set(itens.map(i=>i.categoria))]
+  : [categoria];
+
+  categorias.forEach(cat=>{
+
+    const section =
+    document.createElement('div');
+
+    section.classList.add('category-section');
+
+    section.innerHTML = `
+      <h2 class="category-title">
+        ${cat}
+      </h2>
+
+      <div class="items-grid"></div>
+    `;
+
+    const grid =
+    section.querySelector('.items-grid');
+
+    itens
+    .filter(item=>item.categoria === cat)
+    .forEach(item=>{
+
+      if(reservados.includes(item.nome))
+      return;
+
+      const div =
+      document.createElement('div');
+
+      div.classList.add('item');
+
+      div.innerHTML = `
+
+        <div class="item-image">
+          <img src="${item.imagem}">
+        </div>
+
+        <div class="item-info">
+
+          <div class="item-category">
+            ${item.categoria}
+          </div>
+
+          <div class="item-name">
+            ${item.nome}
+          </div>
+
+        </div>
+
+      `;
+
+      div.onclick = ()=>{
+
+        document
+        .querySelectorAll('.item')
+        .forEach(el=>el.classList.remove('selected'));
+
+        div.classList.add('selected');
+
+        presenteSelecionado =
+        item.nome;
+
+      };
+
+      grid.appendChild(div);
+
+    });
+
+    gridContainer.appendChild(section);
+
+  });
+
+}
+
+tabs.forEach(tab=>{
+
+  tab.onclick = ()=>{
+
+    tabs.forEach(t=>
+      t.classList.remove('active')
+    );
+
+    tab.classList.add('active');
+
+    renderizarItens(
+      tab.dataset.category
+    );
+
+  };
+
+});
+
+carregarReservados();
 document
 .getElementById('confirmarBtn')
 .onclick = async ()=>{
