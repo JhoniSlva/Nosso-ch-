@@ -21,7 +21,7 @@ document.addEventListener('mousemove',(e)=>{
   flowers.forEach((flower,index)=>{
 
     const speed =
-    index === 0 ? 30 : -30;
+    index === 0 ? 40 : -40;
 
     flower.style.transform = `
       translate(
@@ -29,8 +29,33 @@ document.addEventListener('mousemove',(e)=>{
         ${y * speed}px
       )
       rotate(${x * 10}deg)
+      scale(1.03)
     `;
 
   });
+
+});
+
+const entrarBtn =
+document.getElementById('entrarBtn');
+
+entrarBtn.addEventListener('click',()=>{
+
+  const nome =
+  document.getElementById('nome').value;
+
+  if(nome.trim() === '') return;
+
+  document.body.style.transition =
+  '1s';
+
+  document.body.style.opacity = '0';
+
+  setTimeout(()=>{
+
+    window.location.href =
+    'presentes.html?nome=' + nome;
+
+  },1000);
 
 });
