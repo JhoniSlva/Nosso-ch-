@@ -39,7 +39,8 @@ body{
   background-image:
   url('nos.jpeg');
 
- 
+ background-repeat: no-repeat;
+ background-size: contain;
 
 
 
