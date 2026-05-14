@@ -6,6 +6,7 @@
 
 body{
   overflow:hidden;
+  overflow-y: auto;
   font-family:'Poppins',sans-serif;
   background:#020817;
   color:white;
@@ -165,7 +166,7 @@ body{
 .hero{
 
   width:100%;
-  min-height:100vh;
+    min-height:100dvh;
 
   display:flex;
   align-items:center;
@@ -485,6 +486,163 @@ button:hover{
 
   .flower2{
     width:400px;
+  }
+
+}
+@media(max-width:1200px){
+
+  h1{
+    font-size:110px;
+  }
+
+  h2{
+    font-size:48px;
+  }
+
+}
+
+@media(max-width:900px){
+
+  .hero{
+    padding:30px 20px;
+  }
+
+  .content{
+
+    padding:60px 30px;
+
+    border-radius:30px;
+  }
+
+  h1{
+
+    font-size:72px;
+
+    line-height:0.95;
+  }
+
+  h2{
+
+    font-size:34px;
+
+    margin-bottom:30px;
+  }
+
+  .description{
+
+    font-size:18px;
+
+    line-height:1.8;
+  }
+
+  .flower1{
+    width:380px;
+  }
+
+  .flower2{
+    width:340px;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .hero{
+    padding:20px 15px;
+  }
+
+  .content{
+
+    padding:45px 22px;
+
+    border-radius:25px;
+  }
+
+  .mini-title{
+
+    font-size:11px;
+
+    letter-spacing:4px;
+  }
+
+  .line{
+
+    width:90px;
+
+    margin-bottom:30px;
+  }
+
+  h1{
+
+    font-size:54px;
+
+    line-height:0.95;
+  }
+
+  h2{
+
+    font-size:26px;
+
+    margin-bottom:25px;
+  }
+
+  .description{
+
+    font-size:16px;
+
+    line-height:1.7;
+
+    margin-bottom:40px;
+  }
+
+  input{
+
+    padding:18px 5px;
+
+    font-size:15px;
+  }
+
+  button{
+
+    padding:18px;
+
+    font-size:15px;
+  }
+
+  .flower1{
+
+    width:250px;
+
+    top:-60px;
+    left:-80px;
+  }
+
+  .flower2{
+
+    width:240px;
+
+    bottom:-90px;
+    right:-70px;
+  }
+
+  .mouse-light{
+    display:none;
+  }
+
+}
+
+@media(max-width:400px){
+
+  h1{
+    font-size:42px;
+  }
+
+  h2{
+    font-size:22px;
+  }
+
+  .description{
+    font-size:15px;
   }
 
 }
