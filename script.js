@@ -14,8 +14,14 @@ document.addEventListener('mousemove',(e)=>{
     const speed =
     index === 0 ? 30 : -30;
 
-    flower.style.transform =
-    `translate(${x * speed}px, ${y * speed}px)`;
+    flower.style.transform = `
+translate(
+  ${x * speed}px,
+  ${y * speed}px
+)
+rotate(${x * 8}deg)
+scale(1.03)
+`;
 
   });
 

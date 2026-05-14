@@ -82,17 +82,30 @@ body{
 
   position:absolute;
 
-  width:200%;
-  height:200%;
+  width:300%;
+  height:300%;
 
   background-image:
-  radial-gradient(rgba(255,255,255,0.15) 1px,transparent 1px);
 
-  background-size:45px 45px;
+  radial-gradient(
+    rgba(255,255,255,0.18) 1px,
+    transparent 1px
+  ),
 
-  animation:particlesMove 40s linear infinite;
+  radial-gradient(
+    rgba(96,165,250,0.12) 2px,
+    transparent 2px
+  );
+
+  background-size:
+  60px 60px,
+  120px 120px;
+
+  animation:
+  particlesMove 60s linear infinite;
+
+  opacity:0.6;
 }
-
 @keyframes particlesMove{
 
   from{
@@ -104,7 +117,28 @@ body{
   }
 
 }
+.invite{
+    position: relative;
+    overflow: hidden;
+}
+.invite::before{
 
+  content:'';
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+  linear-gradient(
+    135deg,
+    rgba(255,255,255,0.08),
+    transparent,
+    rgba(255,255,255,0.04)
+  );
+
+  pointer-events:none;
+}
 .container{
   width:100%;
   min-height:100vh;
@@ -481,6 +515,108 @@ button:hover{
 
   .description{
     font-size:18px;
+  }
+
+}
+.noise{
+
+  position:fixed;
+  inset:0;
+
+  background-image:
+  url("https://grainy-gradients.vercel.app/noise.svg");
+
+  opacity:0.08;
+
+  mix-blend-mode:soft-light;
+
+  z-index:-1;
+
+  pointer-events:none;
+}
+
+.blur-circle{
+
+  position:absolute;
+
+  border-radius:50%;
+
+  filter:blur(120px);
+
+  pointer-events:none;
+}
+
+.blur1{
+
+  width:400px;
+  height:400px;
+
+  background:#60a5fa33;
+
+  top:10%;
+  left:10%;
+
+  animation:moveBlur1 12s ease-in-out infinite;
+}
+
+.blur2{
+
+  width:350px;
+  height:350px;
+
+  background:#2563eb33;
+
+  bottom:10%;
+  right:5%;
+
+  animation:moveBlur2 16s ease-in-out infinite;
+}
+
+.blur3{
+
+  width:250px;
+  height:250px;
+
+  background:#93c5fd22;
+
+  top:50%;
+  left:50%;
+
+  animation:moveBlur3 10s ease-in-out infinite;
+}
+
+@keyframes moveBlur1{
+
+  0%,100%{
+    transform:translate(0px,0px);
+  }
+
+  50%{
+    transform:translate(40px,-30px);
+  }
+
+}
+
+@keyframes moveBlur2{
+
+  0%,100%{
+    transform:translate(0px,0px);
+  }
+
+  50%{
+    transform:translate(-30px,40px);
+  }
+
+}
+
+@keyframes moveBlur3{
+
+  0%,100%{
+    transform:translate(-50%,-50%);
+  }
+
+  50%{
+    transform:translate(-45%,-55%);
   }
 
 }
