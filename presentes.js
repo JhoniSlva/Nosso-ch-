@@ -13,26 +13,103 @@ window.supabase.createClient(
 const presentes = {
 
   cozinha:[
-    'Air Fryer',
-    'Liquidificador',
-    'Microondas',
-    'Jogo de Panelas',
-    'Talheres',
-    'Pratos'
+
+    {
+      nome:'Air Fryer',
+      imagem:'https://images.unsplash.com/photo-1585515656973-6e8cfc2b4f84?q=80&w=800&auto=format&fit=crop'
+    },
+
+    {
+      nome:'Liquidificador',
+      imagem:'https://images.unsplash.com/photo-1570222094114-d054a817e56b?q=80&w=800&auto=format&fit=crop'
+    },
+
+    {
+      nome:'Microondas',
+      imagem:'https://images.unsplash.com/photo-1585659722983-3a675dabf23d?q=80&w=800&auto=format&fit=crop'
+    },
+
+    {
+      nome:'Jogo de Panelas',
+      imagem:'https://images.unsplash.com/photo-1584990347449-a2d4c2f9d4df?q=80&w=800&auto=format&fit=crop'
+    },
+
+    {
+      nome:'Pratos',
+      imagem:'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=800&auto=format&fit=crop'
+    },
+
+    {
+      nome:'Talheres',
+      imagem:'https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=800&auto=format&fit=crop'
+    }
+
   ],
 
   quarto:[
-    'Travesseiro',
-    'Cobertor',
-    'Lençol',
-    'Edredom'
+
+    {
+      nome:'Lençol',
+      imagem:'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=800&auto=format&fit=crop'
+    },
+
+    {
+      nome:'Travesseiro',
+      imagem:'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=800&auto=format&fit=crop'
+    },
+
+    {
+      nome:'Cobertor',
+      imagem:'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=800&auto=format&fit=crop'
+    }
+
   ],
 
   sala:[
-    'Ventilador',
-    'Tapete',
-    'Mesa',
-    'Cadeiras'
+
+    {
+      nome:'Ventilador',
+      imagem:'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=800&auto=format&fit=crop'
+    },
+
+    {
+      nome:'Tapete',
+      imagem:'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=800&auto=format&fit=crop'
+    },
+
+    {
+      nome:'Mesa',
+      imagem:'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=800&auto=format&fit=crop'
+    }
+
+  ],
+
+  banheiro:[
+
+    {
+      nome:'Toalhas',
+      imagem:'https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=800&auto=format&fit=crop'
+    },
+
+    {
+      nome:'Tapete de Banheiro',
+      imagem:'https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=800&auto=format&fit=crop'
+    }
+
+  ],
+
+  limpeza:[
+
+    {
+      nome:'Vassoura',
+      imagem:'https://images.unsplash.com/photo-1563453392212-326f5e854473?q=80&w=800&auto=format&fit=crop'
+    },
+
+    {
+      nome:'Rodo',
+      imagem:'https://images.unsplash.com/photo-1563453392212-326f5e854473?q=80&w=800&auto=format&fit=crop'
+    }
+
   ]
 
 };
@@ -91,7 +168,7 @@ async function carregarPresentes(){
     presentes[categoria]
     .forEach(item=>{
 
-      if(reservados.includes(item))
+      if(reservados.includes(item.nome))
       return;
 
       const div =
@@ -99,7 +176,21 @@ async function carregarPresentes(){
 
       div.classList.add('item');
 
-      div.innerText = item;
+      div.innerHTML = `
+
+  <div class="image">
+    <img src="${item.imagem}">
+  </div>
+
+  <div class="item-info">
+
+    <h4>
+      ${item.nome}
+    </h4>
+
+  </div>
+
+`;
 
       div.onclick = ()=>{
 
@@ -109,7 +200,7 @@ async function carregarPresentes(){
 
         div.classList.add('selected');
 
-        presenteSelecionado = item;
+       presenteSelecionado = item.nome;
 
       };
 
