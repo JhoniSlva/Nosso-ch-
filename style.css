@@ -42,7 +42,7 @@ body{
   background-size:cover;
   background-position:center;
 
-  transform:scale(1.08);
+
 
   animation:slowZoom 18s ease-in-out infinite alternate;
 }
