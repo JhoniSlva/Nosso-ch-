@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Escolha seu Presente</title>
+  <title>Escolha um Presente</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="presentes.css">
 </head>
@@ -16,70 +16,65 @@
 
   <div class="background"></div>
 
-  <section class="container">
+  <div class="noise"></div>
 
-    <div class="top">
+  <div class="blur blur1"></div>
+  <div class="blur blur2"></div>
 
-      <p class="small">
-        Chá de Casa Nova 💙
+  <section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+      <p class="mini">
+        ✨ Nosso novo lar ✨
       </p>
 
       <h1 id="tituloNome">
         Olá!
       </h1>
 
-      <p class="description">
-        Escolha um presente especial
-        para fazer parte do nosso novo lar.
+      <p class="hero-text">
+        Cada presente fará parte
+        da história do nosso novo começo.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <section class="products-section">
+
+    <div class="top-text">
+
+      <h2>
+        Escolha um presente especial 💙
+      </h2>
+
+      <p>
+        Selecionamos com carinho itens
+        importantes para o nosso novo lar.
       </p>
 
     </div>
 
 
-    <div class="confirm-box">
+    <div class="confirm-area">
 
-      <h2>Você poderá comparecer?</h2>
+      <div class="confirm-card active" data-value="true">
+        💙 Sim, estarei presente
+      </div>
 
-      <div class="options">
-
-        <div class="option active" data-value="true">
-          💙 Sim, estarei presente
-        </div>
-
-        <div class="option" data-value="false">
-          😢 Não poderei comparecer
-        </div>
-
+      <div class="confirm-card" data-value="false">
+        😢 Não poderei comparecer
       </div>
 
     </div>
 
 
-    <div class="category">
-
-      <h3>🍳 Cozinha</h3>
-
-      <div class="grid" id="cozinha"></div>
-
-    </div>
-
-
-    <div class="category">
-
-      <h3>🛏 Quarto</h3>
-
-      <div class="grid" id="quarto"></div>
-
-    </div>
-
-
-    <div class="category">
-
-      <h3>🛋 Sala</h3>
-
-      <div class="grid" id="sala"></div>
-
-    </div>
+    <div class="masonry-grid" id="grid"></div>
 
 
     <button id="confirmarBtn">
