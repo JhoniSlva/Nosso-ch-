@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Escolha seu Presente</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="presentes.css">
+</head>
+<body>
+
+  <div class="background"></div>
+
+  <section class="container">
+
+    <div class="top">
+
+      <p class="small">
+        Chá de Casa Nova 💙
+      </p>
+
+      <h1 id="tituloNome">
+        Olá!
+      </h1>
+
+      <p class="description">
+        Escolha um presente especial
+        para fazer parte do nosso novo lar.
+      </p>
+
+    </div>
+
+
+    <div class="confirm-box">
+
+      <h2>Você poderá comparecer?</h2>
+
+      <div class="options">
+
+        <div class="option active" data-value="true">
+          💙 Sim, estarei presente
+        </div>
+
+        <div class="option" data-value="false">
+          😢 Não poderei comparecer
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="category">
+
+      <h3>🍳 Cozinha</h3>
+
+      <div class="grid" id="cozinha"></div>
+
+    </div>
+
+
+    <div class="category">
+
+      <h3>🛏 Quarto</h3>
+
+      <div class="grid" id="quarto"></div>
+
+    </div>
+
+
+    <div class="category">
+
+      <h3>🛋 Sala</h3>
+
+      <div class="grid" id="sala"></div>
+
+    </div>
+
+
+    <button id="confirmarBtn">
+      Confirmar Presença
+    </button>
+
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+  <script src="presentes.js"></script>
+
+</body>
+</html>
