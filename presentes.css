@@ -5,9 +5,20 @@
 }
 
 body{
-  background:#020817;
-  color:white;
+
+  background:
+  linear-gradient(
+    180deg,
+    #071120 0%,
+    #0b172a 30%,
+    #101d33 60%,
+    #132238 100%
+  );
+
+  color:#f8fafc;
+
   overflow-x:hidden;
+
   font-family:'Poppins',sans-serif;
 }
 .tabs{
@@ -42,12 +53,12 @@ body{
 
   font-size:14px;
 
-  font-weight:500;
+  font-weight:600;
 
-  color:white;
+  color:#e2e8f0;
 
   background:
-  rgba(255,255,255,0.05);
+  rgba(255,255,255,0.06);
 
   border:
   1px solid rgba(255,255,255,0.08);
@@ -61,8 +72,10 @@ body{
   overflow:hidden;
 
   text-align:center;
-}
 
+  box-shadow:
+  0 5px 20px rgba(0,0,0,0.15);
+}
 .tab::before{
 
   content:'';
@@ -125,7 +138,7 @@ body{
 
   font-family:'Cormorant Garamond',serif;
 
-  color:#dcecff;
+  color:#f8fafc;
 }
 
 .items-grid{
@@ -141,16 +154,34 @@ body{
 .background{
 
   position:fixed;
+
   inset:0;
 
   background:
-  radial-gradient(circle at top left,#2563eb33,transparent 30%),
-  radial-gradient(circle at bottom right,#38bdf833,transparent 30%),
+
+  radial-gradient(
+    circle at top left,
+    rgba(96,165,250,0.12),
+    transparent 30%
+  ),
+
+  radial-gradient(
+    circle at bottom right,
+    rgba(147,197,253,0.08),
+    transparent 35%
+  ),
+
+  radial-gradient(
+    circle at center,
+    rgba(59,130,246,0.05),
+    transparent 40%
+  ),
+
   linear-gradient(
-    135deg,
-    #020817,
-    #07152b,
-    #0b2340
+    180deg,
+    #071120,
+    #0b172a,
+    #132238
   );
 
   z-index:-5;
@@ -159,9 +190,10 @@ body{
 .noise{
 
   position:fixed;
+
   inset:0;
 
-  opacity:0.08;
+  opacity:0.03;
 
   background-image:
   url("https://grainy-gradients.vercel.app/noise.svg");
@@ -254,13 +286,14 @@ body{
 .hero-overlay{
 
   position:absolute;
+
   inset:0;
 
   background:
   linear-gradient(
     to bottom,
-    rgba(2,8,23,0.35),
-    rgba(2,8,23,0.88)
+    rgba(15,23,42,0.2),
+    rgba(248,250,252,0.78)
   );
 }
 
@@ -280,11 +313,13 @@ body{
 
   text-transform:uppercase;
 
-  color:#d8ebff;
+  color:#1e3a8a;
 
   margin-bottom:30px;
 
   font-size:13px;
+
+  font-weight:600;
 }
 
 h1{
@@ -296,15 +331,22 @@ h1{
   line-height:0.9;
 
   margin-bottom:25px;
-}
 
+  color:white;
+
+  text-shadow:
+  0 10px 30px rgba(0,0,0,0.25);
+}
 .hero-text{
 
   font-size:24px;
 
-  color:#e7f2ff;
+  color:#f8fafc;
 
   line-height:1.8;
+
+  text-shadow:
+  0 5px 20px rgba(0,0,0,0.2);
 }
 
 .products-section{
@@ -317,11 +359,13 @@ h1{
   padding:80px 30px 120px;
 }
 
-.top-text{
+.top-text p{
 
-  text-align:center;
+  color:#cbd5e1;
 
-  margin-bottom:60px;
+  line-height:1.8;
+
+  font-size:16px;
 }
 
 h2{
@@ -333,12 +377,6 @@ h2{
   font-family:'Cormorant Garamond',serif;
 }
 
-.top-text p{
-
-  color:#dcecff;
-
-  line-height:1.8;
-}
 
 .confirm-area{
 
@@ -359,7 +397,7 @@ h2{
   border-radius:30px;
 
   background:
-  rgba(255,255,255,0.04);
+  rgba(255,255,255,0.06);
 
   border:
   1px solid rgba(255,255,255,0.08);
@@ -373,8 +411,12 @@ h2{
   text-align:center;
 
   font-size:18px;
-}
 
+  color:#f8fafc;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,0.18);
+}
 .confirm-card:hover{
 
   transform:translateY(-8px);
@@ -403,30 +445,25 @@ h2{
 
   position:relative;
 
-  border-radius:35px;
+  border-radius:32px;
 
   overflow:hidden;
 
   cursor:pointer;
 
   background:
-  linear-gradient(
-    135deg,
-    rgba(255,255,255,0.08),
-    rgba(255,255,255,0.03)
-  );
+  rgba(255,255,255,0.08);
 
   border:
   1px solid rgba(255,255,255,0.08);
 
-  backdrop-filter:blur(18px);
+  backdrop-filter:blur(24px);
 
-  transition:0.55s;
+  transition:0.5s;
 
   box-shadow:
-  0 15px 45px rgba(0,0,0,0.2);
+  0 10px 40px rgba(0,0,0,0.22);
 }
-
 .item::before{
 
   content:'';
@@ -457,13 +494,10 @@ h2{
 .item:hover{
 
   transform:
-  translateY(-12px)
-  scale(1.02);
-
-  border-color:#60a5fa;
+  translateY(-8px);
 
   box-shadow:
-  0 30px 70px rgba(37,99,235,0.25);
+  0 20px 60px rgba(96,165,250,0.18);
 }
 
 .item.selected{
@@ -496,7 +530,7 @@ h2{
   background:
   linear-gradient(
     to top,
-    rgba(2,8,23,0.45),
+    rgba(255,255,255,0.18),
     transparent
   );
 }
@@ -521,21 +555,117 @@ h2{
 .item-info{
 
   padding:30px;
+
+  background:
+  linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0.92)
+  );
 }
 
 .item-category{
 
-  color:#9ecfff;
+  color:#2563eb;
 
   margin-bottom:12px;
 
-  font-size:13px;
+  font-size:12px;
 
   letter-spacing:3px;
 
   text-transform:uppercase;
+
+  font-weight:600;
+}
+.floating-confirm{
+
+  position:fixed;
+
+  bottom:20px;
+
+  left:50%;
+
+  transform:translateX(-50%);
+
+  width:calc(100% - 30px);
+
+  max-width:900px;
+
+  background:
+  rgba(15,23,42,0.78);
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(24px);
+
+  border-radius:30px;
+
+  padding:18px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:20px;
+
+  z-index:999;
+
+  box-shadow:
+  0 20px 60px rgba(0,0,0,0.3);
 }
 
+.floating-info{
+
+  font-size:15px;
+
+  font-weight:600;
+
+  color:#f8fafc;
+}
+#confirmarBtn{
+
+  width:auto !important;
+
+  margin:0 !important;
+
+  padding:18px 34px !important;
+
+  border-radius:999px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #2563eb,
+    #60a5fa
+  );
+
+  box-shadow:
+  0 10px 30px rgba(37,99,235,0.25);
+}
+
+@media(max-width:700px){
+
+  .floating-confirm{
+
+    flex-direction:column;
+
+    align-items:stretch;
+
+    bottom:10px;
+
+    padding:14px;
+  }
+
+  #confirmarBtn{
+
+    width:100% !important;
+  }
+
+}
 .item-name{
 
   font-size:34px;
@@ -544,7 +674,7 @@ h2{
 
   font-family:'Cormorant Garamond',serif;
 
-  color:white;
+  color:#f8fafc;
 }
 
 button:not(.tab){

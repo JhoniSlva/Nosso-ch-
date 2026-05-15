@@ -17,97 +17,102 @@ const itens = [
 {
 nome:'Fogão',
 categoria:'Cozinha',
-imagem:'https://images.unsplash.com/photo-1556911220-bff31c812dba?q=80&w=1200&auto=format&fit=crop'
+imagem:'cozinha/fogão.jpeg'
 },
 
 {
 nome:'Batedeira',
 categoria:'Cozinha',
-imagem:'https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?q=80&w=1200&auto=format&fit=crop'
+imagem:'cozinha/batedeira.jpeg'
 },
 
 {
 nome:'Jogo de Mantimentos',
 categoria:'Cozinha',
-imagem:'https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop'
+imagem:'cozinha/potes.jpeg'
 },
 
 {
 nome:'Jogo de Copos',
 categoria:'Cozinha',
-imagem:'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=1200&auto=format&fit=crop'
+imagem:'cozinha/copos2.jpeg'
 },
 
 {
 nome:'Jogo de Xícaras',
 categoria:'Cozinha',
-imagem:'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop'
+imagem:'cozinha/copos.jpeg'
 },
 
 {
 nome:'Kit de Panelas',
 categoria:'Cozinha',
-imagem:'https://images.unsplash.com/photo-1584990347449-a2d4c2f9d4df?q=80&w=1200&auto=format&fit=crop'
+imagem:'cozinha/panelas.jpeg'
 },
 
 {
 nome:'Kit Talheres',
 categoria:'Cozinha',
-imagem:'https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=1200&auto=format&fit=crop'
+imagem:'cozinha/talheres.jpeg'
 },
 
 {
 nome:'Chaleira',
 categoria:'Cozinha',
-imagem:'https://images.unsplash.com/photo-1514996937319-344454492b37?q=80&w=1200&auto=format&fit=crop'
+imagem:'https://http2.mlstatic.com/D_NQ_NP_2X_842078-MLB107572614544_032026-F.webp'
 },
 
 {
 nome:'Panela de Pressão',
 categoria:'Cozinha',
-imagem:'https://images.unsplash.com/photo-1584990347449-a2d4c2f9d4df?q=80&w=1200&auto=format&fit=crop'
+imagem:'cozinha/paneladepressao.jpeg'
 },
 
 {
 nome:'Jogo de Jantar',
 categoria:'Cozinha',
-imagem:'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=1200&auto=format&fit=crop'
+imagem:'cozinha/pratos.jpeg'
 },
 
 {
 nome:'Micro-ondas',
 categoria:'Cozinha',
-imagem:'https://images.unsplash.com/photo-1585659722983-3a675dabf23d?q=80&w=1200&auto=format&fit=crop'
+imagem:'cozinha/microondas.jpeg'
 },
 
 {
 nome:'Air Fryer',
 categoria:'Cozinha',
-imagem:'https://images.unsplash.com/photo-1585515656973-6e8cfc2b4f84?q=80&w=1200&auto=format&fit=crop'
+imagem:'cozinha/airfryer.jpeg'
 },
 
 {
 nome:'Forno Elétrico',
 categoria:'Cozinha',
-imagem:'https://images.unsplash.com/photo-1570222094114-d054a817e56b?q=80&w=1200&auto=format&fit=crop'
+imagem:'cozinha/forno.jpeg'
 },
 
 {
 nome:'Garrafa de Café',
 categoria:'Cozinha',
-imagem:'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop'
+imagem:'cozinha/cafeteira2.jpeg'
 },
 
 {
 nome:'Cafeteira',
 categoria:'Cozinha',
-imagem:'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop'
+imagem:'cozinha/cafeteira.jpeg'
 },
 
 {
 nome:'Liquidificador',
 categoria:'Cozinha',
-imagem:'https://images.unsplash.com/photo-1570222094114-d054a817e56b?q=80&w=1200&auto=format&fit=crop'
+imagem:'cozinha/liquidificador.jpeg'
+},
+{
+nome:'Lixeira',
+categoria:'Cozinha',
+imagem:'cozinha/lixeira1.jpeg'
 },
 
 /* SALA */
@@ -115,13 +120,13 @@ imagem:'https://images.unsplash.com/photo-1570222094114-d054a817e56b?q=80&w=1200
 {
 nome:'Sofá',
 categoria:'Sala',
-imagem:'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1200&auto=format&fit=crop'
+imagem:'sala/sofa.jpeg'
 },
 
 {
 nome:'Painel',
 categoria:'Sala',
-imagem:'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop'
+imagem:'sala/painel.jpeg'
 },
 
 /* BANHEIRO */
@@ -129,13 +134,13 @@ imagem:'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200
 {
 nome:'Kit Toalhas',
 categoria:'Banheiro',
-imagem:'https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=1200&auto=format&fit=crop'
+imagem:'banheiro/toalha.jpeg'
 },
 
 {
 nome:'Lixeira Inox',
 categoria:'Banheiro',
-imagem:'https://images.unsplash.com/photo-1563453392212-326f5e854473?q=80&w=1200&auto=format&fit=crop'
+imagem:'banheiro/lixeira.jpeg'
 },
 
 /* QUARTO */
@@ -143,37 +148,37 @@ imagem:'https://images.unsplash.com/photo-1563453392212-326f5e854473?q=80&w=1200
 {
 nome:'Cama',
 categoria:'Quarto',
-imagem:'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop'
+imagem:'quarto/cama.jpeg'
 },
 
 {
 nome:'Jogo de Lençóis',
 categoria:'Quarto',
-imagem:'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop'
+imagem:'quarto/lençol.jpeg'
 },
 
 {
 nome:'Travesseiro',
 categoria:'Quarto',
-imagem:'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop'
+imagem:'quarto/travesseiro.jpeg'
 },
 
 {
 nome:'Cobertas',
 categoria:'Quarto',
-imagem:'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop'
+imagem:'quarto/cobertas.jpeg'
 },
 
 {
-nome:'Guardar Roupas',
+nome:'Guarda Roupas',
 categoria:'Quarto',
-imagem:'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop'
+imagem:'quarto/quardaroupa.jpeg'
 },
 
 {
 nome:'Cortinas',
 categoria:'Quarto',
-imagem:'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop'
+imagem:'quarto/cortina.jpeg'
 },
 
 /* LAVANDERIA */
@@ -181,7 +186,7 @@ imagem:'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200
 {
 nome:'Máquina de Lavar',
 categoria:'Lavanderia',
-imagem:'https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?q=80&w=1200&auto=format&fit=crop'
+imagem:'lavanderia/maquina.jpeg'
 }
 
 ];const params =
@@ -311,6 +316,12 @@ function renderizarItens(categoria){
 
         presenteSelecionado =
         item.nome;
+        document
+.getElementById(
+'presenteSelecionadoText'
+)
+.innerText =
+`🎁 ${item.nome}`;
 
       };
 
