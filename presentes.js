@@ -95,13 +95,13 @@ imagem:'cozinha/forno.jpeg'
 {
 nome:'Garrafa de Café',
 categoria:'Cozinha',
-imagem:'cozinha/cafeteira2.jpeg'
+imagem:'cozinha/cafeteira.jpeg'
 },
 
 {
 nome:'Cafeteira',
 categoria:'Cozinha',
-imagem:'cozinha/cafeteira.jpeg'
+imagem:'cozinha/cafeteira2.jpeg'
 },
 
 {
